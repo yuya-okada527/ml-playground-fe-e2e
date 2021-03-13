@@ -1,6 +1,8 @@
 const { it, describe, expect } = require("@playwright/test");
 
-const BASE_PAGE = "http://localhost:3000";
+require("dotenv").config();
+
+const BASE_PAGE = process.env.TARGET_URL;
 
 describe("Homeページ 機能テスト", () => {
   describe("検索", () => {

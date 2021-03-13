@@ -1,6 +1,8 @@
 const { it, describe, beforeEach, expect } = require("@playwright/test");
 
-const BASE_PAGE = "http://localhost:3000";
+require("dotenv").config();
+
+const BASE_PAGE = process.env.TARGET_URL;
 
 describe("Aboutページ 機能テスト", () => {
   describe("Aboutページへの画面遷移", () => {
