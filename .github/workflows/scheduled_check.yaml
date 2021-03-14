@@ -1,0 +1,23 @@
+name: Scheduled Check
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  check:
+    name: Check if App is functional
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Install package
+        run: npm install
+      - name: functional E2E test
+        run: npm run test:ci:functional
+        env:
+          TARGET_URL: https://ml-playground-fe.vercel.app

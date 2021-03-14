@@ -9,11 +9,11 @@ describe("Aboutページ 機能テスト", () => {
     it("Topページから遷移", async ({ page }) => {
       await page.goto(BASE_PAGE);
       await page.click("text=About");
-      expect(await page.title()).toBe("About This Site");
+      expect(await page.title()).toBe("About Site");
     });
     it("URLで直接遷移", async ({ page }) => {
       await page.goto(`${BASE_PAGE}/about`);
-      expect(await page.title()).toBe("About This Site");
+      expect(await page.title()).toBe("About Site");
     });
   });
 
