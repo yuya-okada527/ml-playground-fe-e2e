@@ -3,7 +3,7 @@ name: Scheduled Check
 on:
   schedule:
     # UTC
-    - cron: "0 2-8 * * *"
+    # - cron: "0 2-8 * * *"
 
 jobs:
   check:
