@@ -26,4 +26,4 @@ jobs:
       - name: functional E2E test
         run: npm run test:ci:functional
         env:
-          TARGET_URL: https://ml-playground-fe.vercel.app
+          TARGET_URL: https://ml-playground-fe-git-develop-yuya-okada527.vercel.app
