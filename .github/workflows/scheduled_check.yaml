@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-    # UTC 17時に実行
-    - cron: "0 8 * * *"
+    # UTC 9時から19時まで毎時実行
+    - cron: "0 0-10 * * *"
 
 jobs:
   check:
