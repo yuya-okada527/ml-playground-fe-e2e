@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
-  schedule:
-    # UTC 9時から19時まで毎時実行
-    - cron: "0 0-10 * * *"
+  # schedule:
+  #   # UTC 9時から19時まで毎時実行
+  #   - cron: "0 0-10 * * *"
 
 jobs:
   check:
